@@ -1,0 +1,201 @@
+/*
+  默认部分，请不要修改与删除
+  1. 新标签的统一属性
+*/
+
+/* 新标签的统一属性 */
+pinkx, imgChunk, group, item {
+  display: block;
+}
+
+.read a:link, .read a:visited {
+  color: inherit;
+}
+
+/*
+  可修改的部分
+*/
+#pinkx {
+  position: relative;
+  background-color: #F5F5F5;
+  color: #424242;
+  left: -132px;
+  width: 1024px;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+#title, #content, #links, #state {
+  position: absolute;
+  width: 512px;
+  right: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* TITLE */
+
+#title {
+  text-align: right;
+  height: 130px;
+}
+#title::after, #title h1::after {
+  content: "";
+  position: relative;
+  display: block;
+  background-color: rgba(207, 216, 220, 0.57);
+  width: 80px;
+  z-index: -1;
+}
+#title::after {
+  height: 50%;
+  bottom: -43px;
+  left: -6px;
+  box-shadow: #BDBDBD 3px -3px 20px;
+}
+#title h1::after {
+  height: 100%;
+  top: -46px;
+  left: 69px;
+  box-shadow: #BDBDBD -3px 3px 20px;
+}
+#title h1, #title h5, #title p {
+  position: absolute;
+  background-color: #212121;
+  color: #FAFAFA;
+  width: max-content;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  line-height: 1.5;
+}
+#title h1 {
+  height: 40px;
+  top: 20px;
+  right: 16px;
+}
+#title h5 {
+  height: 25px;
+  top: 47px;
+}
+#title p {
+  height: 27px;
+  top: 70px;
+}
+
+/* COVER */
+
+#cover {
+  background-color: #BDBDBD;
+  width: 512px;
+  height: 748px;
+}
+
+/* CONTENT */
+
+#content {
+  top: 120px;
+}
+#content group {
+  position: relative;
+  min-height: 77px;
+  padding-right: 33px;
+  margin-bottom: 24px;
+}
+#content h3, #links h3 {
+  position: absolute;
+  writing-mode: vertical-rl;
+  background-color: #212121;
+  color: #FAFAFA;
+  padding: 10px 2px;
+  right: 0;
+  width: 34px;
+  height: 77px;
+  box-sizing: border-box;
+}
+#content h3::after, #links h3::after {
+  content: "";
+  position: relative;
+  display: block;
+  background-color: rgba(207, 216, 220, 0.57);
+  width: 100%;
+  height: 100%;
+  top: -15px;
+  right: -37px;
+  z-index: -1;
+  box-shadow: #BDBDBD -3px 3px 20px;
+}
+#content item {
+  display: inline-block;
+}
+#content item .job {
+  font-size: 12px;
+  margin-right: 3px;
+}
+#content item .name {
+  color: #FAFAFA;
+  background-color: #212121;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+#content item .org {
+  margin-right: 5px;
+}
+
+/* LINKS */
+#links {
+  bottom: 97px;
+  height: 117px;
+  padding-left: 30px;
+  padding-right: 60px;
+  padding-top: 27px;
+  box-sizing: border-box;
+  text-align: right;
+}
+#links h3 {
+  right: 20px;
+  letter-spacing: 6px;
+}
+#links item {
+  display: inline-block;
+  margin-right: 10px;
+}
+#links item .other {
+  font-size: 12px;
+  margin-left: 3px;
+  color: #757575;
+}
+#links item:nth-of-type(1):before {
+  content: "/";
+  position: relative;
+  right: 5px;
+}
+#links item::after {
+  content: "/";
+  position: relative;
+  right: -5px;
+}
+/* state */
+
+#state {
+  background-color: rgba(207, 216, 220, 0.57);
+  text-align: right;
+  bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  height: 97px;
+}
+#state::before {
+  content: "";
+  position: absolute;
+  top: -581px;
+  right: 32px;
+  display: block;
+  height: 570px;
+  width: 1px;
+  border-left: #212121 dashed 2px;
+  z-index: -2;
+}

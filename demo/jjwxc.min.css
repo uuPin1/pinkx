@@ -1,0 +1,48 @@
+html, body,
+ul, li, ol, dl, dd, dt,
+p, h1, h2, h3, h4, h5, h6,
+form, fieldset, legend, img, p,
+div{
+  margin: 0;
+  padding: 0;
+}
+.top {
+  display: block;
+  text-align: -webkit-center;
+}
+.top .google-ad {
+  width: 728px;
+  height: 90px;
+  overflow: hidden;
+  background-color: blanchedalmond;
+  font-size: 55px;
+  line-height: 90px;
+  color: gray;
+}
+.boardname {
+  width: 760px;
+  margin: 0 auto;
+  color: #0000FF;
+}
+.boardname .left {
+  width: 300px;
+  float: left;
+}
+.boardname .right {
+  width: 250px;
+  float: right;
+  text-align: right;
+}
+.image1 {
+  width: 46px;
+  height: 46px;
+  background-color: #DDD;
+}
+.read {
+  line-height: 30px;
+}
+
+a:link, a:visited {
+  color: #0000FF;
+  text-decoration: none;
+}
