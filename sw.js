@@ -26,17 +26,17 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-4157691bccffc02e17f7.js"
+    "url": "webpack-runtime-f96ab9730ecb7859328e.js"
   },
   {
-    "url": "app-2aa2fdd8d16150e84b20.js"
+    "url": "app-11c70a27bba3b3252598.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-b0b2294d9104f157d825.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d48e832e4c89a3228d4b2cfeea4b52b6"
+    "revision": "fee54020de7fcde9f9e3710a14b5ee81"
   },
   {
     "url": "component---src-pages-404-tsx.0e4338761429b4eb16ac.css"
@@ -87,7 +87,7 @@ var navigationRoute = new workbox.routing.NavigationRoute(function (_ref) {
 
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      var offlineShell = "/pinkx/offline-plugin-app-shell-fallback/index.html";
+      var offlineShell = "/offline-plugin-app-shell-fallback/index.html";
       var cacheName = workbox.core.cacheNames.precache;
       return caches.match(offlineShell, {
         cacheName: cacheName
@@ -144,7 +144,7 @@ var messageApi = {
           includesPrefix = _ref3.includesPrefix;
 
       if (!includesPrefix) {
-        return "/pinkx" + pathname;
+        return "" + pathname;
       } else {
         return pathname;
       }
