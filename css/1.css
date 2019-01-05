@@ -1,0 +1,207 @@
+/*
+  默认部分，请不要修改与删除
+  1. 新标签的统一属性
+*/
+
+/* 新标签的统一属性 */
+pinkx, imgChunk, group, item {
+  display: block;
+}
+
+.read a:link, .read a:visited {
+  color: inherit;
+}
+
+/*
+  可修改的部分
+*/
+
+#pinkx {
+    position: relative;
+    width: 1000px;
+    box-sizing: border-box;
+    z-index: 0;
+    left: -120px;
+    color:rgb(30,30,30);
+    font-family: sans-serif;
+
+    border-color: rgba(0,0,0,0.3);
+    border-style: double;
+    border-width: 4px;
+
+    background-color: rgb(253,253,253);
+    background-image: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
+    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+#title, #cover, #content, #links, #state{
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0px;
+    left: 0px;
+}
+
+#cover, #content, #links, #state{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+}
+#content, #links, #state{
+    width: 900px;
+}
+
+item{
+    display: inline-block;
+    font-size: 16px;
+    padding-top: 20px;
+}
+group{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background: white;
+}
+
+/* TITLE */
+#title{
+    padding-top: 50px;
+    height: 150px;
+    line-height: 30px;
+}
+#title *{
+    padding-top: 0;
+    margin-top: 0;
+}
+#title h1, #title h5{
+    display: inline-block;
+    font-weight: bolder;
+
+}
+#title h1{
+    font-size: 60px;
+}
+#title h5{
+    font-size: 35px;
+    margin-left: 5px;
+}
+#title p{
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+/* Poster */
+
+#cover{
+    width: 850px;
+    height: 478px; /* 16:9 */
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+/* Content */
+
+#content{
+    margin-top: 30px;
+    line-height: 25px;
+}
+
+#content h3, #links h3{
+    font-size: 23px;
+    /*background: rgba(30,30,30,0.2);*/
+    padding: 3px;
+    -webkit-text-stroke:.5px white;
+    border-bottom: 1px solid rgba(30,30,30,0.4);
+}
+#content h3::after, #links h3::after{
+    content: "<<<";
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+.item{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    line-height: 10px;
+}
+.item span{
+    float: left;
+}
+.name{
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.3);
+}
+.org{
+    font-size: 13px;
+}
+.job::after{
+    content: "：";
+}
+.org::before{
+    content: "「";
+}
+.org::after{
+    content: "」";
+}
+
+/* Links */
+
+#links{
+    font-size: 15px;
+    line-height: 22px;
+    z-index: 10;
+    margin-top: -5px;
+}
+#links item{
+    margin-left: 20px;
+    padding: 3px;
+    margin-top: 10px;
+    transform: perspective(1px) translateZ(0);
+    transition-property: color;
+    transition-duration: .3s;
+}
+.other{
+    font-size: 12px;
+}
+.link{
+    color: black;
+    text-decoration: none;
+}
+
+#links item::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: grey;
+  transform: scaleX(0);
+  transform-origin: 0 100%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.link:hover, .link:focus, .link:active, #links item:hover{
+  color: white;
+  /*transition-duration: .3s;*/
+}
+#links item:hover::before, #links item:focus::before, #links item:active::before{
+  transform: scaleX(1);
+}
+
+/* statement */
+#state{
+    line-height: 5px;
+    margin-top: 30px;
+}
+#state h3{
+    font-size: 15px;
+    padding: 0;
+}
+#state item{
+    font-size: 13px;
+}
