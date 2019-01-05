@@ -36,7 +36,8 @@ div{
 .image1 {
   width: 46px;
   height: 46px;
-  background-color: #DDD;
+  background-image: url('/img/hema.svg');
+  background-size: 46px 46px;
 }
 .read {
   line-height: 30px;
