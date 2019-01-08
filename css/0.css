@@ -18,6 +18,7 @@ pinkx, imgChunk, group, item {
 #pinkx {
   position: relative;
   background-color: #F5F5F5;
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
   color: #424242;
   left: -132px;
   width: 1024px;
@@ -29,59 +30,48 @@ pinkx, imgChunk, group, item {
   position: absolute;
   width: 512px;
   right: 0;
-  padding: 20px;
+  padding: 16px;
   box-sizing: border-box;
 }
 
 /* TITLE */
 
 #title {
-  text-align: right;
-  height: 130px;
-}
-#title::after, #title h1::after {
-  content: "";
-  position: relative;
-  display: block;
-  background-color: rgba(207, 216, 220, 0.57);
-  width: 80px;
-  z-index: -1;
-}
-#title::after {
-  height: 50%;
-  bottom: -43px;
-  left: -6px;
-  box-shadow: #BDBDBD 3px -3px 20px;
-}
-#title h1::after {
-  height: 100%;
-  top: -46px;
-  left: 69px;
-  box-shadow: #BDBDBD -3px 3px 20px;
+  text-align: left;
+  height: 128px;
 }
 #title h1, #title h5, #title p {
   position: absolute;
-  background-color: #212121;
-  color: #FAFAFA;
   width: max-content;
   padding-left: 1em;
   padding-right: 1em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  line-height: 1.5;
+  line-height: 1.6;
+  box-sizing: border-box;
 }
 #title h1 {
-  height: 40px;
-  top: 20px;
-  right: 16px;
+  background-color: #212121;
+  color: #FAFAFA;
+  font-size: 28px;
+  height: 56px;
+  line-height: 2.0;
+  top: 16px;
+  left: 16px;
 }
 #title h5 {
-  height: 25px;
-  top: 47px;
+  background-color: #E0E5E7;
+  color: #212121;
+  height: 24px;
+  top: 72px;
+  left: 16px;
+  font-weight: 100;
 }
 #title p {
-  height: 27px;
-  top: 70px;
+  background-color: #E0E5E7;
+  color: #212121;
+  font-weight: 100;
+  height: 24px;
+  top: 72px;
+  right: 12px;
 }
 
 /* COVER */
@@ -115,28 +105,32 @@ pinkx, imgChunk, group, item {
 #content h3, #links h3 {
   position: absolute;
   writing-mode: vertical-rl;
-  background-color: #212121;
-  color: #FAFAFA;
+  background-color: #E0E5E7;
+  color: #212121;
   padding: 10px 2px;
   right: 0;
   width: 34px;
   height: 77px;
   box-sizing: border-box;
-}
-#content h3::after, #links h3::after {
-  content: "";
-  position: relative;
-  display: block;
-  background-color: rgba(207, 216, 220, 0.57);
-  width: 100%;
-  height: 100%;
-  top: -15px;
-  right: -37px;
-  z-index: -1;
-  box-shadow: #BDBDBD -3px 3px 20px;
+  font-weight: 100;
 }
 #content item {
   display: inline-block;
+  z-index: 2;
+  transition: 300ms;
+}
+#content item:hover {
+  margin-left: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: -16px;
+  background-color: #424242;
+  color: #E0E5E7;
+  z-index: 99;
+}
+#content item:hover .name {
+  color: #212121;
+  background-color: #FAFAFA;
 }
 #content item .job {
   font-size: 12px;
@@ -147,8 +141,8 @@ pinkx, imgChunk, group, item {
   background-color: #212121;
   padding-left: 7px;
   padding-right: 7px;
-  font-weight: 600;
   margin-right: 5px;
+  transition: 300ms background-color;
 }
 #content item .org {
   margin-right: 5px;
@@ -162,14 +156,15 @@ pinkx, imgChunk, group, item {
   padding-right: 60px;
   padding-top: 27px;
   box-sizing: border-box;
-  text-align: right;
+  text-align: left;
 }
 #links h3 {
-  right: 20px;
-  letter-spacing: 6px;
+  right: 16px;
+  letter-spacing: 5px;
 }
 #links item {
   display: inline-block;
+  height: 24px;
   margin-right: 10px;
 }
 #links item .other {
@@ -187,10 +182,29 @@ pinkx, imgChunk, group, item {
   position: relative;
   right: -5px;
 }
+#links item a {
+  position: relative;
+}
+#links item a:hover::before {
+  opacity: 1;
+}
+#links item a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 15%;
+  top: 10px;
+  width: 70%;
+  height: 4px;
+  background-color: #757575;
+  z-index: -1;
+  opacity: 0;
+  transition: 500ms opacity;
+}
 /* state */
 
 #state {
-  background-color: rgba(207, 216, 220, 0.57);
+  background-color: #E0E5E7;
   text-align: right;
   bottom: 0;
   font-size: 12px;
@@ -200,10 +214,10 @@ pinkx, imgChunk, group, item {
 #state::before {
   content: "";
   position: absolute;
-  top: -581px;
-  right: 32px;
+  top: -577px;
+  right: 27px;
   display: block;
-  height: 570px;
+  height: 564px;
   width: 1px;
   border-left: #212121 dashed 2px;
   z-index: -2;
