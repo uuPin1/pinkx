@@ -53,9 +53,11 @@ pinkx, imgChunk, group, item {
   color: #FAFAFA;
   font-size: 28px;
   height: 56px;
-  line-height: 2.0;
+  line-height: 50px;
   top: 16px;
   left: 16px;
+  border-bottom: #E0E5E7 3px solid;
+  border-top: #E0E5E7 3px solid;
 }
 #title h5 {
   background-color: #E0E5E7;
