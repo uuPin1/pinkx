@@ -127,14 +127,14 @@ group {
   margin-left: 10px;
 }
 
-.item {
+.member {
   display: inline-block;
   text-decoration: none;
   color: black;
   margin-left: 20px;
   line-height: 10px;
 }
-.item span {
+.member span {
   float: left;
 }
 .name {
