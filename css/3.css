@@ -37,43 +37,61 @@ item {
   margin-top: 96px;
   margin-bottom: 16px;
   padding: 24px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: background-color 700ms,
+    color 700ms,
+    -webkit-box-shadow 700ms;
+  transition: background-color 700ms,
+    color 700ms,
+    -webkit-box-shadow 700ms;
   transition: box-shadow 700ms,
-  background-color 700ms,
-  color 700ms;
+    background-color 700ms,
+    color 700ms;
+  transition: box-shadow 700ms,
+    background-color 700ms,
+    color 700ms,
+    -webkit-box-shadow 700ms;
 }
+
 #pinkx::before {
   content: '';
   display: block;
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   right: 0;
   height: 2300px;
   background-image: url('http://pinkx.uupin1.com/css/img/xiangyunwenli.png');
   background-color: #E9F3E1;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   z-index: -1;
 }
+
 #pinkx:hover {
   background-color: rgba(233, 243, 225, 1);
   border: 3px #C6D8B7 solid;
   border-radius: 50px;
-  box-shadow: 0px 0px 50px #C6D8B7;
+  -webkit-box-shadow: 0px 0px 50px #C6D8B7;
+          box-shadow: 0px 0px 50px #C6D8B7;
 }
 
 /* TITLE */
 #pinkx:hover #title::before {
   opacity: 0;
 }
+
 #pinkx:hover #title h5,
 #pinkx:hover #title p {
   font-weight: 100;
 }
+
 #title {
   position: relative;
   text-align: left;
 }
+
 #title::before,
 #title h1 {
   font-size: 96px;
@@ -85,18 +103,22 @@ item {
   left: -159px;
   width: 1024px;
 }
+
 #title::before {
   content: attr(data-title);
   display: block;
+  -webkit-transition: opacity 700ms;
   transition: opacity 700ms;
   position: absolute;
   height: 100%;
   z-index: 2;
 }
+
 #title h1 {
   position: relative;
   z-index: -1;
   -webkit-mask-image: url("http://xinanbai.coding.me/radio/asserts/img/mask.png");
+          mask-image: url("http://xinanbai.coding.me/radio/asserts/img/mask.png");
 }
 
 #title h5 {
@@ -114,10 +136,12 @@ item {
 }
 
 /* COVER */
-#pinkx:hover #cover .img{
+#pinkx:hover #cover .img {
   z-index: 1;
   -webkit-mask-image: url("http://xinanbai.coding.me/radio/asserts/img/mask.png");
+          mask-image: url("http://xinanbai.coding.me/radio/asserts/img/mask.png");
 }
+
 #cover {
   position: relative;
   z-index: 0;
@@ -125,12 +149,14 @@ item {
   height: 1392px;
   overflow: hidden;
 }
+
 #cover .img {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-color: #9C7661;
 }
+
 #cover::before,
 #cover::after,
 #cover .img::before {
@@ -139,21 +165,23 @@ item {
   position: absolute;
   width: 284px;
   height: 360px;
-  /* left: -188px;
-  top: -124px; */
   border-radius: 0% 150% / 100%;
   border: 232px solid rgba(233, 243, 225, 1);
   z-index: 1;
-  clip-path: polygon(171px 0px, 560px 0px, 560px 702px, 171px 702px);
+  -webkit-clip-path: polygon(171px 0px, 560px 0px, 560px 702px, 171px 702px);
+          clip-path: polygon(171px 0px, 560px 0px, 560px 702px, 171px 702px);
 }
+
 #cover::before {
   left: -188px;
   top: -168px;
 }
+
 #cover::after {
   right: -208px;
   top: 284px;
 }
+
 #cover .img::before {
   left: -188px;
   top: 736px;
@@ -163,6 +191,7 @@ item {
 #pinkx:hover #content group {
   background-color: rgba(233, 243, 225, 1);
 }
+
 #content {
   position: absolute;
   width: 712px;
@@ -170,14 +199,18 @@ item {
   top: 452px;
   z-index: 9;
 }
+
 #content group {
   width: 352px;
   height: 464px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: rgba(233, 243, 225, 1);
+  -webkit-transition: background-color 700ms;
   transition: background-color 700ms;
   z-index: 1;
 }
+
 #content h3,
 #links h3 {
   font-size: 50px;
@@ -185,7 +218,9 @@ item {
   padding-bottom: 20px;
   z-index: 2;
   -webkit-mask-image: url("http://xinanbai.coding.me/radio/asserts/img/mask.png");
+          mask-image: url("http://xinanbai.coding.me/radio/asserts/img/mask.png");
 }
+
 #content .staff h3::after,
 #content .cast h3::before,
 #content .ed h3::after,
@@ -197,27 +232,35 @@ item {
   border-bottom: 1px #9C7661 solid;
   margin: 0 10px;
 }
+
 #content .staff,
 #content .ed {
   margin-left: 360px;
 }
+
 #content .cast {
   text-align: right;
 }
+
 #content item {
   position: relative;
+  -webkit-transition: color 700ms;
   transition: color 700ms;
 }
+
 #content item:hover {
   color: #E9F3E1;
 }
+
 #content .staff item::before,
 #content .ed item::before {
   left: 100px;
 }
+
 #content .cast item::before {
   left: 252px;
 }
+
 #content item::before {
   content: '';
   display: block;
@@ -227,42 +270,55 @@ item {
   height: 100%;
   width: 2px;
   opacity: 0;
+  -webkit-transition: left 700ms,
+    width 700ms,
+    opacity 700ms;
   transition: left 700ms,
-  width 700ms,
-  opacity 700ms;
+    width 700ms,
+    opacity 700ms;
 }
+
 #content item:hover::before {
   opacity: 1;
   width: 368px;
   left: -8px;
 }
-#content .staff .member ,
+
+#content .staff .member,
 #content .ed .member {
   right: -100px;
 }
+
 #content .cast .member {
   left: -100px;
 }
+
 #content .member {
   position: relative;
   height: 40px;
   line-height: 40px;
   font-size: 18px;
 }
+
 #content .member .name {
+  -webkit-transition: font 700ms;
   transition: font 700ms;
 }
+
 #content .staff .member .org,
 #content .ed .member .org {
   left: -100px;
   text-align: right;
 }
+
 #content .cast .member .org {
   right: -100px;
 }
+
 #content .member .job::after {
   content: '：';
 }
+
 #content .member .org {
   position: absolute;
   color: #C6D8B7;
@@ -270,16 +326,21 @@ item {
   overflow: hidden;
   width: 100px;
 }
+
 #content .member .org::before {
   content: '【';
 }
+
 #content .member .org::after {
   content: '】';
 }
+
 #pinkx:hover h3 {
   z-index: 3;
   -webkit-mask-image: none;
+          mask-image: none;
 }
+
 #pinkx:hover .member .name {
   font-weight: 600;
 }
@@ -288,26 +349,32 @@ item {
 #links {
   width: 712px;
 }
+
 #links h3::before {
   width: 570px;
 }
+
 #links item {
   display: inline-block;
   position: relative;
   width: 174px;
   height: 120px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 #links .link {
   display: block;
   width: 100px;
   text-align: center;
   line-height: 100px;
   margin: 0 35px;
+  -webkit-transition: background 0.7s, padding 0.7s, margin 0.7s;
   transition: background 0.7s, padding 0.7s, margin 0.7s;
   border: 3px #C6D8B7 dashed;
   border-radius: 0% 150% / 100%;
 }
+
 #links item:hover .link {
   background-color: #9C7661;
   background-image: url('http://pinkx.uupin1.com/css/img/xiangyunwenli.png');
@@ -318,9 +385,11 @@ item {
   font-size: 18px;
   color: #E9F3E1;
 }
+
 #links item:hover .other {
   color: #E9F3E1;
 }
+
 #links .other {
   display: block;
   position: absolute;
@@ -338,6 +407,7 @@ item {
   font-size: 1.1em;
   line-height: 1.5;
 }
+
 #state item {
   font-size: 12px;
 }
