@@ -12,7 +12,8 @@ item {
 }
 
 .read a:link,
-.read a:visited {
+.read a:visited,
+.read a:hover {
   color: inherit;
 }
 

@@ -8,7 +8,9 @@ pinkx, imgChunk, group, item {
   display: block;
 }
 
-.read a:link, .read a:visited {
+.read a:link,
+.read a:visited,
+.read a:hover {
   color: inherit;
 }
 
