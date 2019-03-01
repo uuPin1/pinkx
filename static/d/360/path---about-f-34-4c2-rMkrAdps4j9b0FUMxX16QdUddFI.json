@@ -1,0 +1,1 @@
+{"errors":[{"message":"Field \"repository\" argument \"owner\" of type \"String!\" is required but not provided.","locations":[{"line":3,"column":5}]},{"message":"Field \"repository\" argument \"name\" of type \"String!\" is required but not provided.","locations":[{"line":3,"column":5}]}],"pageContext":{}}
