@@ -11,12 +11,6 @@ item {
   display: block;
 }
 
-.read a:link,
-.read a:visited,
-.read a:hover {
-  color: inherit;
-}
-
 /*-------------
    欢迎使用Pink X！
    黑白视界V1.0
