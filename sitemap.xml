@@ -10,4 +10,5 @@
 <url> <loc>https://pinkx.uupin1.com//generate/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://pinkx.uupin1.com//</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://pinkx.uupin1.com//select/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://pinkx.uupin1.com//users/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
